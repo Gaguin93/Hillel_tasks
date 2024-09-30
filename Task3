@@ -1,0 +1,8 @@
+// Отримуємо три рядки від користувача
+let firstString = prompt("перший рядок:");
+let secondString = prompt("другий рядок:");
+let thirdString = prompt("третій рядок:");
+
+// Виводимо їх у довільному порядку з використанням шаблонних рядків
+
+console.log(`${thirdString}, ${firstString}, ${secondString}`);
