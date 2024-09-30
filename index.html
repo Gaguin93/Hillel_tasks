@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types Example</title>
+</head>
+
+<body>
+    <h1>Check the console for data types</h1>
+
+    <script>
+        // Список різних типів даних
+        console.log("string:", typeof "Hello, World");   // string
+        console.log("number:", typeof 42);              // number
+        console.log("boolean:", typeof true);           // boolean
+        console.log("undefined:", typeof undefined);    // undefined
+        console.log("object:", typeof null);            // object (особливість JavaScript)
+        console.log("object (array):", typeof [1, 2, 3]); // object (масиви також є об'єктами)
+        console.log("object (object):", typeof { a: 1 }); // object
+        console.log("function:", typeof function () { });  // function
+        console.log("bigint:", typeof BigInt(9007199254740991)); // bigint
+        console.log("symbol:", typeof Symbol("sym"));   // symbol
+    </script>
+</body>
+
+</html>
