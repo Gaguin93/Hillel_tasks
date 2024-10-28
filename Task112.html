@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зміна кольору тексту</title>
+    <style>
+        #textBlock {
+            font-size: 24px;
+            color: black;
+            /* Початковий колір тексту */
+            text-align: center;
+            margin: 20px;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="textBlock">Це текст, колір якого змінюватиметься.</div>
+    <button onclick="toggleTextColor()">Змінити колір тексту</button>
+
+    <script>
+        function toggleTextColor() {
+            const textBlock = document.getElementById("textBlock");
+            const originalColor = "black";
+            const newColor = "red";
+
+            // Змінюємо колір на новий або повертаємо до початкового
+            textBlock.style.color = textBlock.style.color === originalColor ? newColor : originalColor;
+        }
+    </script>
+
+</body>
+
+</html>
