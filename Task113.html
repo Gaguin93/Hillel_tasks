@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Випадкове зображення</title>
+    <style>
+        #imageContainer {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            max-height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="imageContainer">
+        <img id="randomImage" src="" alt="Випадкове зображення">
+    </div>
+    <button onclick="displayRandomImage()">Показати випадкове зображення</button>
+
+    <script>
+        function displayRandomImage() {
+            const imageCount = 9; 
+            const randomIndex = Math.floor(Math.random() * imageCount) + 1; 
+            const imagePath = `images/${randomIndex}.jpg`; 
+            document.getElementById("randomImage").src = imagePath; 
+        }
+
+       
+        window.onload = displayRandomImage;
+    </script>
+
+</body>
+
+</html>
