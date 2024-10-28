@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблиця Піфагора</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Таблиця Піфагора 10x10</h2>
+    <table id="multiplicationTable"></table>
+
+    <script>
+        function generateMultiplicationTable(size) {
+            const table = document.getElementById("multiplicationTable");
+
+            for (let row = 0; row <= size; row++) {
+                const tr = document.createElement("tr");
+
+                for (let col = 0; col <= size; col++) {
+                    const cell = row === 0 || col === 0 ? document.createElement("th") : document.createElement("td");
+
+                    if (row === 0 && col === 0) {
+                        cell.textContent = "×";
+                    } else if (row === 0) {
+                        cell.textContent = col;
+                    } else if (col === 0) {
+                        cell.textContent = row;
+                    } else {
+                        cell.textContent = row * col;
+                    }
+
+                    tr.appendChild(cell);
+                }
+
+                table.appendChild(tr);
+            }
+        }
+
+        generateMultiplicationTable(10);
+    </script>
+</body>
+
+</html>
