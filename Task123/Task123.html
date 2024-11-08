@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <style>
+        .todo-container {
+            margin-top: 40px;
+        }
+        li {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        button {
+            margin-left: 20px;
+        }
+        input {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>ToDo List</h2>
+    <div class="todo-container">
+        <ul id="taskList">
+            <li>Завдання 1 <button class="delete-btn">Видалити</button></li>
+            <li>Завдання 2 <button class="delete-btn">Видалити</button></li>
+            <li>Завдання 3 <button class="delete-btn">Видалити</button></li>
+        </ul>
+        <input type="text" id="taskInput" placeholder="Додати нове завдання">
+        <button id="addTaskButton">Додати</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
